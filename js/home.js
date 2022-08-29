@@ -1,6 +1,6 @@
 var all_cars = [];
 async function getCarsData() {
-  await CRUD("../json/cars.json", "GET", undefined, function (res) {
+  await CRUD("../assets/json/cars.json", "GET", undefined, function (res) {
     all_cars = res.data;
     for (let car of res.data) {
       CreateACardFromData(car.attributes, car.id);
@@ -75,7 +75,7 @@ async function startDDL() {
   brandSelect.style.backgroundColor = "black";
   let modelSelect = document.getElementById("select_models");
 
-  CRUD("../json/brands.json", "GET", undefined, function (res) {
+  CRUD("../assets/json/brands.json", "GET", undefined, function (res) {
     res.data.forEach((brand) => {
       let option = document.createElement("option");
       option.value = brand.id;
@@ -99,7 +99,7 @@ async function startDDL() {
 
 var brands = [];
 
-CRUD("../json/brands.json", "GET", undefined, async function (res) {
+CRUD("../assets/json/brands.json", "GET", undefined, async function (res) {
     console.log("brands", res);
   brands = await res.data;
 });

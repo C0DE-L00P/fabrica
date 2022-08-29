@@ -1,6 +1,6 @@
 async function getCarsData() {
   await CRUD(
-    "../json/cars.json",
+    "../assets/json/cars.json",
     "GET",
     undefined,
     function (res) {
