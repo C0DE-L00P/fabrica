@@ -3,7 +3,7 @@ var all_cars = [];
 
 //show car data by id from api
 async function getCarData(carID) {
-  CRUD("../assets/json/cars.json", "GET", undefined, function (res) {
+  CRUD("https://c0de-l00p.github.io/fabrica/assets/json/cars.json", "GET", undefined, function (res) {
     all_cars = res.data;
     console.log(res.data)
     let filtered = all_cars.find((car) => car.id == carID);

@@ -1,6 +1,6 @@
 async function getCarsData() {
   await CRUD(
-    "../assets/json/cars.json",
+    "https://c0de-l00p.github.io/fabrica/assets/json/cars.json",
     "GET",
     undefined,
     function (res) {
